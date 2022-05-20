@@ -1,1 +1,11 @@
- 
+Error:
+Failed to build iOS app
+Error output from Xcode build:
+↳
+    2022-05-20 00:25:21.374 xcodebuild[47400:4409416] Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionSentinelHostApplications for extension Xcode.DebuggerFoundation.AppExtensionHosts.watchOS of plug-in com.apple.dt.IDEWatchSupportCore
+
+Solution:
+
+Check the error properly and do the work required
+    
+    
