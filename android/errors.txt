@@ -1,1 +1,15 @@
- 
+ Error : 
+Execution failed for task ':app:packageRelease'.
+[        ] > A failure occurred while executing com.android.build.gradle.tasks.PackageAndroidArtifact$IncrementalSplitterRunnable
+[        ]    > com.android.ide.common.signing.KeytoolException: Failed to read key upload from store "/Users/mrcse/Desktop/upload-keystore.jks": Integrity
+check failed: java.security.NoSuchAlgorithmException: Algorithm HmacPBESHA256 not available
+
+Solution :
+-> Generate jks file using command :
+    keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload -storetype JKS
+-> Don't change the path just find and put it in the key.properties file
+-> key.properties file
+   storePassword=QwErTyAskMed6deMksA
+   keyPassword=QwErTyAskMed6deMksA
+   keyAlias=upload
+   storeFile=/path-to-jks-file/upload-keystore.jks
