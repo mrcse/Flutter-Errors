@@ -8,4 +8,22 @@ Solution:
 
 Check the error properly and do the work required
     
-    
+
+
+ERROR:
+Invalid App Store Icon. The App Store Icon in the asset catalog in 'Runner.app' can't be transparent nor contain an alpha channel. (ID: e5cc651f-591d-4c32-a4a4-36e5a2bdc8f6)
+
+
+flutter_launcher_icons:
+flutter_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/images/logo.png"
+  
+  OR
+  
+Click & open the App Store icon (1024*1024) in the preview app.
+Export it by unticking the Alpha channel.
+Replace the current App Store icon with the newly exported icon image.
+Validate and upload.
