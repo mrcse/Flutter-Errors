@@ -6,7 +6,7 @@ check failed: java.security.NoSuchAlgorithmException: Algorithm HmacPBESHA256 no
 
 Solution :
 -> Generate jks file using command :
-    keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload -storetype JKS
+    keytool -genkeypair -v -keystore ~/upload-keystore.jks -keyalg RSA -keysize 2048 -validity 10000 -alias upload
 -> Don't change the path just find and put it in the key.properties file
 -> key.properties file
    storePassword=QwErTyAskMed6deMksA
